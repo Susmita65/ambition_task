@@ -1,8 +1,16 @@
-import 'package:ambition/routes/app_route.dart';
+import 'package:ambition/question/provider/question_provider.dart';
+import 'package:ambition/screens/home_page.dart';
+import 'package:ambition/screens/lifecycle.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => QuestionProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -13,10 +21,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(),
+      theme: ThemeData(primarySwatch: Colors.blue),
       debugShowCheckedModeBanner: false,
-      initialRoute: "/",
-      routes: AppRoute.routes,
+      home: const HomePage(),
     );
   }
 }

@@ -1,9 +1,9 @@
-import 'package:demo_of_provider/model/articles.dart';
+import 'package:demo_of_provider/provider/model/articles.dart';
 import 'package:demo_of_provider/service/api_service.dart';
 import 'package:flutter/material.dart';
 
 class ApiProvider extends ChangeNotifier {
-  final ApiService _apiServive = ApiService();
+  final ApiService _apiService = ApiService();
   bool _isLoading = false;
   List<Articles> _articlesList = [];
 
@@ -15,7 +15,7 @@ class ApiProvider extends ChangeNotifier {
     notifyListeners();
 
     try {
-      _articlesList = await _apiServive.fetchData();
+      _articlesList = await _apiService.fetchData();
     } catch (e) {
       print("Error Fetching Data:$e");
       _articlesList = [];

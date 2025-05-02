@@ -21,3 +21,19 @@ class CounterCubit extends Cubit<CounterState> {
     emit(CounterChangeState(count: counter));
   }
 }
+
+//done from documentationmedium
+class NextCounterCubit extends Cubit<int> {
+  NextCounterCubit() : super(0);
+
+  void increment() {
+    emit(state + 1);
+  }
+
+  void decrement() {
+    if (state == 0) {
+      return;
+    }
+    emit(state - 1);
+  }
+}

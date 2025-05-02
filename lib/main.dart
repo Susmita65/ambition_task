@@ -1,4 +1,6 @@
-import 'package:demo_of_provider/counter/page/counter_page.dart';
+import 'package:demo_of_provider/bloc/counter/page/counter_page.dart';
+import 'package:demo_of_provider/bloc/api/page/api_display_page.dart';
+import 'package:demo_of_provider/pathlab/pages/pathlab_page.dart';
 import 'package:demo_of_provider/provider/api_provider.dart';
 import 'package:demo_of_provider/provider/counter_provider.dart';
 import 'package:demo_of_provider/screens/api_screen.dart';
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: CounterPage(),
+      home: ApiDisplayPage(),
     );
   }
 }

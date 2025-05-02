@@ -1,5 +1,5 @@
 import 'dart:developer';
-import 'package:demo_of_provider/counter/cubit/counter_cubit.dart';
+import 'package:demo_of_provider/cubit/counter/cubit/counter_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -65,28 +65,3 @@ class _CounterPageState extends State<CounterPage> {
     );
   }
 }
-
-//       floatingActionButton: Row(
-//         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//         children: [
-//           Expanded(
-//             child: FloatingActionButton(
-//               onPressed: () {
-//                 context.read<CounterCubit>().increment();
-//               },
-//               child: Text("Increment"),
-//             ),
-//           ),
-//           Expanded(
-//             child: FloatingActionButton(
-//               onPressed: () {
-//                 context.read<CounterCubit>().decrement();
-//               },
-//               child: const Text("Decrement"),
-//             ),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }

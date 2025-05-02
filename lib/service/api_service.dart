@@ -1,4 +1,4 @@
-import 'package:demo_of_provider/model/articles.dart';
+import 'package:demo_of_provider/provider/model/articles.dart';
 import 'package:dio/dio.dart';
 
 class ApiService {
@@ -6,6 +6,7 @@ class ApiService {
     try {
       final response = await Dio().get(
         "https://newsapi.org/v2/everything",
+
         queryParameters: {
           "q": "apple",
           "from": "today",

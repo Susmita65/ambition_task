@@ -1,4 +1,4 @@
-import 'package:demo_of_provider/provider/model/articles.dart';
+import 'package:demo_of_provider/provider/api/model/articles.dart';
 import 'package:dio/dio.dart';
 
 class ApiService {

@@ -1,8 +1,8 @@
-import 'package:demo_of_provider/provider/counter_provider.dart';
+import 'package:demo_of_provider/provider/counter/counter_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class CounterScreen extends StatelessWidget {
+class CounterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
